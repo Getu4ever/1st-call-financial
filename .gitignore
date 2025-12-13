@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# environment variables
+.env
+.env.local
+.env.*.local
+
+# vercel
+.vercel/
+
+# sanity
+sanity/node_modules/
+sanity/dist/
+sanity/.sanity/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+
