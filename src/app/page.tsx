@@ -88,7 +88,7 @@ export default function HomePage() {
         {/* Right column image */}
         <div className="relative rounded-2xl overflow-hidden shadow-xl w-full max-w-md md:self-start mt-20">
           <Image
-            src="/digital-accounting-nottingham04.jpg"
+            src="/homepage-body.jpg"
             alt="Digital accounting and financial services"
             width={800}
             height={600}

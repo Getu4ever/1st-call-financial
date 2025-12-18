@@ -25,104 +25,120 @@ export default function Header() {
   const isServicesActive = pathname.startsWith("/services");
 
   return (
-    <header className="bg-[#2d459c] text-white shadow-lg relative z-50">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 flex items-center justify-between">
+    <header className="text-white shadow-lg relative z-50">
 
-        {/* LOGO + CONTACT */}
-<div className="flex flex-col items-start gap-3 pl-4 md:pl-6">
-          <Link href="/">
-            <div className="w-[260px] h-[100px] relative bg-white rounded-xl shadow-md border border-white/40 overflow-hidden">
-              <Image
-                src="/1st-call-financial-services.jpg"
-                alt="1st Call UK Financial Services Logo"
-                fill
-                priority
-                className="object-contain"
-              />
-            </div>
+      {/* GROUP BAR (NEW) */}
+      <div className="bg-[#233a86] text-xs">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 flex justify-end">
+          <Link
+            href="/1stcalluk-group"
+            className="hover:text-yellow-300 transition"
+          >
+            Part of the 1st Call UK Group
           </Link>
-
-          {/* DESKTOP CONTACT BUTTONS */}
-<div className="hidden md:flex gap-4 w-[260px] justify-center">
-            <a
-              href="tel:+441158453325"
-className="bg-white text-[#2d459c] font-semibold py-2.5 w-1/2 rounded-lg shadow hover:bg-gray-100 transition flex items-center justify-center gap-2"
-            >
-              📞 Call Us
-            </a>
-            <a
-              href="mailto:info@1stcalluk.financial"
-className="bg-white text-[#2d459c] font-semibold py-2.5 w-1/2 rounded-lg shadow hover:bg-gray-100 transition flex items-center justify-center gap-2"
-            >
-              ✉ Email Us
-            </a>
-          </div>
         </div>
+      </div>
 
-        {/* DESKTOP NAV */}
-        <nav className="hidden lg:flex items-center gap-8 text-base font-medium">
-          <NavLink href="/" label="Home" />
-          <NavLink href="/about-us" label="About" />
+      {/* MAIN HEADER */}
+      <div className="bg-[#2d459c]">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 flex items-center justify-between">
 
-          {/* SERVICES DROPDOWN (DESKTOP) */}
-          <div className="relative">
-            <button
-              type="button"
-              onClick={() => setServicesOpen(v => !v)}
-              className={`flex items-center gap-1 transition ${
-                isServicesActive ? "text-yellow-300" : "hover:text-yellow-300"
-              }`}
-            >
-              Services <span className="text-sm">▾</span>
-            </button>
-
-            {servicesOpen && (
-              <div
-                className="absolute left-0 mt-3 bg-white text-[#2d459c] rounded-xl shadow-xl w-64 overflow-hidden"
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                {services.map(service => {
-                  const isActive = pathname === service.href;
-
-                  return (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      onClick={() => setServicesOpen(false)}
-                      className={`block px-5 py-3 text-sm transition ${
-                        isActive
-                          ? "bg-yellow-100 font-semibold"
-                          : "hover:bg-gray-100"
-                      }`}
-                    >
-                      {service.label}
-                    </Link>
-                  );
-                })}
+          {/* LOGO + CONTACT */}
+          <div className="flex flex-col items-start gap-3 pl-4 md:pl-6">
+            <Link href="/">
+              <div className="w-[260px] h-[100px] relative bg-white rounded-xl shadow-md border border-white/40 overflow-hidden">
+                <Image
+                  src="/1st-call-financial-services.jpg"
+                  alt="1st Call UK Financial Services Logo"
+                  fill
+                  priority
+                  className="object-contain"
+                />
               </div>
-            )}
-          </div>
-          <NavLink href="/team" label="Our Team" />
-          <NavLink href="/document-management" label="DMS" />
-          <Link href="/financial-blog">Blog</Link>
-          <NavLink href="/latest-news" label="Media" />
-          <NavLink href="/contact" label="Contact" />
-        </nav>
+            </Link>
 
-        {/* MOBILE MENU TOGGLE */}
-        <button
-          className="lg:hidden text-2xl"
-          onClick={() => setMenuOpen(v => !v)}
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
+            {/* DESKTOP CONTACT BUTTONS */}
+            <div className="hidden md:flex gap-4 w-[260px] justify-center">
+              <a
+                href="tel:+441158453325"
+                className="bg-white text-[#2d459c] font-semibold py-2.5 w-1/2 rounded-lg shadow hover:bg-gray-100 transition flex items-center justify-center gap-2"
+              >
+                📞 Call Us
+              </a>
+              <a
+                href="mailto:info@1stcalluk.financial"
+                className="bg-white text-[#2d459c] font-semibold py-2.5 w-1/2 rounded-lg shadow hover:bg-gray-100 transition flex items-center justify-center gap-2"
+              >
+                ✉ Email Us
+              </a>
+            </div>
+          </div>
+
+          {/* DESKTOP NAV */}
+          <nav className="hidden lg:flex items-center gap-8 text-base font-medium">
+            <NavLink href="/" label="Home" />
+            <NavLink href="/about-us" label="About" />
+
+            {/* SERVICES DROPDOWN */}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setServicesOpen(v => !v)}
+                className={`flex items-center gap-1 transition ${
+                  isServicesActive ? "text-yellow-300" : "hover:text-yellow-300"
+                }`}
+              >
+                Services <span className="text-sm">▾</span>
+              </button>
+
+              {servicesOpen && (
+                <div
+                  className="absolute left-0 mt-3 bg-white text-[#2d459c] rounded-xl shadow-xl w-64 overflow-hidden"
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  {services.map(service => {
+                    const isActive = pathname === service.href;
+
+                    return (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        onClick={() => setServicesOpen(false)}
+                        className={`block px-5 py-3 text-sm transition ${
+                          isActive
+                            ? "bg-yellow-100 font-semibold"
+                            : "hover:bg-gray-100"
+                        }`}
+                      >
+                        {service.label}
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            <NavLink href="/team" label="Our Team" />
+            <NavLink href="/document-management" label="DMS" />
+            <Link href="/financial-blog" className="hover:text-yellow-300 transition">Blog</Link>
+            <NavLink href="/latest-news" label="Media" />
+            <NavLink href="/contact" label="Contact" />
+          </nav>
+
+          {/* MOBILE MENU TOGGLE */}
+          <button
+            className="lg:hidden text-2xl"
+            onClick={() => setMenuOpen(v => !v)}
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
+        </div>
       </div>
 
       {/* MOBILE MENU */}
       {menuOpen && (
         <div className="lg:hidden bg-[#2d459c] px-6 py-6 space-y-4 text-base">
-
           <MobileLink href="/" label="Home" close={() => setMenuOpen(false)} />
           <MobileLink href="/about-us" label="About" close={() => setMenuOpen(false)} />
 
@@ -154,6 +170,7 @@ className="bg-white text-[#2d459c] font-semibold py-2.5 w-1/2 rounded-lg shadow 
               </div>
             )}
           </div>
+
           <MobileLink href="/team" label="Our Team" close={() => setMenuOpen(false)} />
           <MobileLink href="/document-management" label="DMS" close={() => setMenuOpen(false)} />
           <MobileLink href="/financial-blog" label="Blog" close={() => setMenuOpen(false)} />
