@@ -29,7 +29,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 flex items-center justify-between">
 
         {/* LOGO + CONTACT */}
-        <div className="flex flex-col items-start gap-4">
+<div className="flex flex-col items-start gap-3 pl-4 md:pl-6">
           <Link href="/">
             <div className="w-[260px] h-[100px] relative bg-white rounded-xl shadow-md border border-white/40 overflow-hidden">
               <Image
@@ -43,16 +43,16 @@ export default function Header() {
           </Link>
 
           {/* DESKTOP CONTACT BUTTONS */}
-<div className="hidden md:flex gap-6 w-[260px] justify-center">
+<div className="hidden md:flex gap-4 w-[260px] justify-center">
             <a
               href="tel:+441158453325"
-className="bg-white text-[#2d459c] font-semibold py-3 w-1/2 rounded-lg shadow hover:bg-gray-100 transition flex items-center justify-center gap-2"
+className="bg-white text-[#2d459c] font-semibold py-2.5 w-1/2 rounded-lg shadow hover:bg-gray-100 transition flex items-center justify-center gap-2"
             >
               📞 Call Us
             </a>
             <a
               href="mailto:info@1stcalluk.financial"
-className="bg-white text-[#2d459c] font-semibold py-3 w-1/2 rounded-lg shadow hover:bg-gray-100 transition flex items-center justify-center gap-2"
+className="bg-white text-[#2d459c] font-semibold py-2.5 w-1/2 rounded-lg shadow hover:bg-gray-100 transition flex items-center justify-center gap-2"
             >
               ✉ Email Us
             </a>
