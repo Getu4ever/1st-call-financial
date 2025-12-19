@@ -20,7 +20,7 @@ export default function HomePage() {
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-[#2d459c]/80 flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-10 animate-fade-in">
+<div className="absolute inset-0 bg-[#2d459c]/80 flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-10 pt-10 pb-10 sm:pt-0 sm:pb-0 animate-fade-in">
           <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold mb-2 sm:mb-3 md:mb-4 drop-shadow-lg leading-snug">
             Trusted Accountants & Financial Advisers in Nottingham
           </h1>
