@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* ===== Hero Section ===== */}
-      <header className="relative h-36 sm:h-[50vh] md:h-[55vh] overflow-hidden mb-8">
+<header className="relative min-h-[240px] sm:h-[50vh] md:h-[55vh] overflow-hidden mb-8">
         <Image
           src="/financial-services-team.jpg"
           alt="Professional accountants and financial advisers in Nottingham"
@@ -19,8 +19,7 @@ export default function HomePage() {
           sizes="100vw"
           className="object-cover"
         />
-
-<div className="absolute inset-0 bg-[#2d459c]/80 flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-10 pt-10 pb-10 sm:pt-0 sm:pb-0 animate-fade-in">
+<div className="absolute inset-0 bg-[#2d459c]/80 flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-10 animate-fade-in">
           <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold mb-2 sm:mb-3 md:mb-4 drop-shadow-lg leading-snug">
             Trusted Accountants & Financial Advisers in Nottingham
           </h1>
