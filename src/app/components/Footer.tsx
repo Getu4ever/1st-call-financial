@@ -63,7 +63,7 @@ export default function Footer() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[460px]">
               {/* Immigration Services */}
               <a
-                href="https://1stcalluk.com/"
+                href="https://1stcalluk-96op.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white rounded-lg shadow-md hover:shadow-lg transition p-4 flex flex-col items-center justify-center w-[220px]"
@@ -82,7 +82,7 @@ export default function Footer() {
 
               {/* Group */}
               <a
-                href="/1stcalluk-group"
+                href="https://1st-call-uk-group.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white rounded-lg shadow-md hover:shadow-lg transition p-4 flex flex-col items-center justify-center w-[220px]"
