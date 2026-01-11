@@ -86,7 +86,7 @@ export default function ServicesPage() {
               image="/inheritance-tax-hero.png"
               title="Inheritance Tax Planning"
               description="Strategic estate and inheritance planning to protect assets and minimise tax liabilities."
-              link="/services/inheritance-tax-planing"
+              link="/services/inheritance-tax-planning"
             />
 
             <ServiceCard
